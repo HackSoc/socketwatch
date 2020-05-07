@@ -1,0 +1,11 @@
+{
+  "name": "socketwatch",
+  "version": "1.0.0",
+  "description": "Generate live view counts for HackSoc pages using WebSockets",
+  "main": "server.js",
+  "author": "Luke Moll",
+  "license": "ISC",
+  "dependencies": {
+    "ws": "^7.2.5"
+  }
+}
