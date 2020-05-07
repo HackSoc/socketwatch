@@ -1,7 +1,13 @@
 const WebSocket = require('ws');
 
+const port = process.argv.length > 2 ? parseInt(process.argv[2]) : 8080;
+if(isNaN(port)) {
+    console.error("First argument must be a valid port number!");
+    process.exit(1);
+}
+
 const wss = new WebSocket.Server({
-    port: 8080
+    port: port
 });
 
 const heartbeatInterval = 3000;
