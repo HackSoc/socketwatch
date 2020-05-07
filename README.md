@@ -1,6 +1,8 @@
 socketwatch
 ===
 
+The use of the [URL](https://nodejs.org/api/url.html) API requires **nodejs version 10 or later**.
+
 ## Example usage
 This is best put behind an Nginx reverse proxy, perhaps under a subpath
 
