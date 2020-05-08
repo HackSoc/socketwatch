@@ -11,8 +11,8 @@ There are <span id="viewers">0<span> people viewing this page right now.
 <script>
     let ws = new WebSocket("ws://example.com/socketwatch/");
 
-    ws.addEventListener('message', (viewcount) => {
-        document.querySelector('#viewers').innerHTML = viewcount;
+    ws.addEventListener('message', (e) => {
+        document.querySelector('#viewers').innerHTML = e.data;
     }); // Whenever the server replies, update the view count
 
     ws.addEventListener('open', () => {
