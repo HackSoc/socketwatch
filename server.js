@@ -29,10 +29,10 @@ wss.on('connection', (ws, req) => {
             console.log(req.headers['origin']);
             ws.close(1008, "Mismatched Origin");
         }
-        mappings.set(ws.id, u.origin + u.pathname);
+        mappings.set(ws.id, u.origin + u.pathname + u.search);
         let count = 0;
         for (let [k,v] of mappings.entries()) {
-            if(v == u.origin + u.pathname) 
+            if(v == u.origin + u.pathname + u.search) 
                 count++;
         }
         ws.send(count);
